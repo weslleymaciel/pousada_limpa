@@ -1,0 +1,143 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1a7fab"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"></LinearLayout>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView"
+                android:src="@drawable/iconeformiguinha"
+                android:layout_weight="0.20"
+                android:padding="3dp" />
+
+            <TextView
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Pousada Limpa"
+                android:id="@+id/textView"
+                android:textColor="#FFF"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="250dp" android:id="@+id/map" tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvAddress"
+            android:background="#E2E2E2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:background="#F2F2F2">
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="5dip"
+                android:text="Latitude: "
+                android:textSize="20dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="unknown"
+                android:textSize="20dip" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="5dip"
+                android:text="Longitude: "
+                android:textSize="20dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="unknown"
+                android:textSize="20dip" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:id="@+id/imgThumb"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/nothumb"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fotografar"
+            android:id="@+id/btnTakePic"
+            android:background="#1a7fab"
+            android:textColor="#FFF"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gerar JSON"
+            android:id="@+id/btnSend"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFF"
+            android:background="#1a7fab"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textJSON"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+</ScrollView>
